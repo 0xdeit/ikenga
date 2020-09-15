@@ -1,29 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <header class="header">
+      <h1 id="logo">Ikenga</h1>
+      <ul id="nav">
+        <li><a href="#" class="nav-link">Dashboard</a></li>
+        <li><a href="#" class="nav-link">Profile</a></li>
+        <li><a href="#" class="nav-link">Login</a></li>
+      </ul>
+    </header>
+    <Hero hero_title="Track your time." />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Dashboard from "./components/Dashboard.vue";
+import Hero from "./components/Hero.vue";
 
 @Component({
   components: {
-    HelloWorld
+    Dashboard,
+    Hero
   }
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./styles/global.scss";
+@import "./styles/App.scss";
 </style>

@@ -8,20 +8,108 @@ a {
     text-decoration: none;
 }
 
-.header {
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background: $base-color;
-    // padding: 0 2rem 0 10rem;
-    padding: 0 10rem;
+    padding: 0 10%;
     margin: 0;
     height: 4rem;
-    // v2
-    // background: $primary-gradient;
-    // box-shadow: 0 0.05rem 0.5rem $primary-color;
 }
+
+footer {
+    background: $primary-color;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    height: 2rem;
+    a {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+nav {
+    list-style-type: none;
+    color: $semidark;
+}
+
+nav li {
+    font-family: $body-font;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    margin-left: 0.4rem;
+    margin-right: 1rem;
+    line-height: 3rem;
+
+    a {
+        color: inherit;
+    }
+
+    .nav-link {
+        cursor: pointer;
+    }
+}
+
+.separator {
+    height: 0.2rem;
+    width: 80%;
+    margin: 0 10%;
+    border-radius: 2rem;
+    background-color: $primary-color;
+}
+
+// .flex-container {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.highlights {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 2rem 10%;
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+    background-color: $base-color;
+    max-width: 15rem;
+    h2{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    a {
+        text-align: center;
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+.nav-link {
+    $border-size: 2px;
+    padding-bottom: $border-size;
+    white-space: nowrap;
+    &:hover {
+        border-bottom: $border-size solid $base-color;
+    }
+}
+
 
 .btn-border-white {
     box-sizing: border-box;
@@ -42,37 +130,4 @@ a {
     font-size: 2.2rem;
     letter-spacing: -0.1rem;
     color: $primary-color;
-}
-
-#nav {
-    list-style-type: none;
-    color: $semidark;
-}
-
-#nav li {
-    font-family: $body-font;
-    font-size: 1rem;
-    font-weight: 600;
-    display: inline-block;
-    position: relative;
-    margin-left: 0.4rem;
-    margin-right: 1rem;
-    line-height: 3rem;
-
-    a {
-        color: inherit;
-    }
-
-    .nav-link {
-        cursor: pointer;
-    }
-}
-
-.nav-link {
-    $border-size: 2px;
-    padding-bottom: $border-size;
-    white-space: nowrap;
-    &:hover {
-        border-bottom: $border-size solid $base-color;
-    }
 }

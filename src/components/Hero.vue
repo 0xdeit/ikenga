@@ -1,6 +1,7 @@
 <template>
   <div class="hero">
     <h1 class="hero-title">{{ hero_title }}</h1>
+    <a href="#"><button class="btn-border-white">Learn more</button></a>
   </div>
 </template>
 
